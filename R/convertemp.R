@@ -8,7 +8,10 @@
 #' @export
 #' @examples
 #' fahr_to_kelvin(32)
+
+
 fahr_to_kelvin <- function(temp) {
+  assert_that(is.numeric(temp))
   kelvin <- ((temp - 32) * (5 / 9)) + 273.15
   return(kelvin)
 }
@@ -24,6 +27,7 @@ fahr_to_kelvin <- function(temp) {
 #' @examples
 #' kelvin_to_celsius(273.15)
 kelvin_to_celsius <- function(temp) {
+  assert_that(is.numeric(temp))
   celsius <- temp - 273.15
   return(celsius)
 }
@@ -39,6 +43,7 @@ kelvin_to_celsius <- function(temp) {
 #' @examples
 #' celsius_to_fahr(0)
 celsius_to_fahr <- function(temp) {
+  assert_that(is.numeric(temp))
   fahr <- (temp * (9 / 5)) + 32
   return(fahr)
 }
@@ -54,6 +59,7 @@ celsius_to_fahr <- function(temp) {
 #' @examples
 #' fahr_to_celsius(32)
 fahr_to_celsius <- function(temp) {
+  assert_that(is.numeric(temp))
   temp_k <- fahr_to_kelvin(temp)
   result <- kelvin_to_celsius(temp_k)
   return(result)
@@ -70,6 +76,7 @@ fahr_to_celsius <- function(temp) {
 #' @examples
 #' kelvin_to_fahr(273.15)
 kelvin_to_fahr <- function(temp) {
+  assert_that(is.numeric(temp))
   celsius <- kelvin_to_celsius(temp)
   result <- celsius_to_fahr(celsius)
   return(result)
@@ -86,6 +93,7 @@ kelvin_to_fahr <- function(temp) {
 #' @examples
 #' celsius_to_kelvin(0)
 celsius_to_kelvin <- function(temp) {
+  assert_that(is.numeric(temp))
   fahr <- celsius_to_fahr(temp)
   result <- fahr_to_kelvin(fahr)
 }
