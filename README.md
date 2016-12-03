@@ -1,4 +1,8 @@
 
+### tests:
+
+[tests](https://github.com/ananab/convertemp/tree/master/tests)
+
 ### convertemp
 
 Easily convert temperatures between any combination of Celsius, Kelvin, and Fahrenheit.
